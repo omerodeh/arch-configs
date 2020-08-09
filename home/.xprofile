@@ -1,0 +1,13 @@
+export EDITOR='nvim'
+export PATH='/home/kareem/.local/bin:$PATH'
+export BROWSER='brave'
+export TERMINAL='st'
+export LOCATION='Princeton'
+
+. ~/scripts/remaps
+. ~/scripts/setbg
+picom -b &
+unclutter &
+redshift &
+dunst &
+#xautolock -time 15 -corners ---00 -locker "systemctl suspend" &

@@ -1,0 +1,4 @@
+#!/bin/sh
+#killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
+. /home/kareem/scripts/remaps
+#killall dwmblocks &>/dev/null; dwmblocks &
