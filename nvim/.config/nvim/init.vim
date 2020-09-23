@@ -9,7 +9,7 @@ set termguicolors
 hi clear SpellBad
 hi SpellBad cterm=underline
 
-autocmd BufRead,BufNewFile *.md,*.tex,*.txt setlocal spell spelllang=en_us | set linebreak
+autocmd BufRead,BufNewFile *.md,*.tex,*.txt,*.ms setlocal spell spelllang=en_us | set linebreak
 
 "Reconfigure tab to print 4 space characters"
 set tabstop=4
@@ -113,18 +113,18 @@ nnoremap <C-k> [sz=
 
 " for groff (ms)
 
-autocmd FileType ms nnoremap <buffer> \v :!mupdf %:t:r.pdf& <Enter>
-autocmd FileType ms nnoremap <buffer> \l :!groff -T pdf -ms % > %:t:r.pdf <Enter>
+autocmd FileType nroff nnoremap <Leader>v :!mupdf %:t:r.pdf& <Enter>
+autocmd FileType nroff nnoremap <Leader>g :!groff -T pdf -ms % > %:t:r.pdf <Enter>
 
 " for latex
 
-autocmd FileType tex nnoremap <buffer> \v :!mupdf %:t:r.pdf& <Enter>
-autocmd FileType tex nnoremap <buffer> \l :!pdflatex % <Enter>
+autocmd FileType tex nnoremap <Leader>v :!mupdf %:t:r.pdf& <Enter>
+autocmd FileType tex nnoremap <Leader>l :!pdflatex % <Enter>
 
 " for pandoc
 
-autocmd FileType md nnoremap <buffer> \v :!mupdf %:t:r.pdf& <Enter>
-autocmd FileType md nnoremap <buffer> \p :!pandoc % -o %:r.pdf 
+autocmd FileType markdown nnoremap <Leader>v :!mupdf %:t:r.pdf& <Enter>
+autocmd FileType markdown nnoremap <Leader>p :!pandoc % -o %:r.pdf 
 
 " changing color scheme
 "nnoremap \
