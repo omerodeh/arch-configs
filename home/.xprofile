@@ -1,13 +1,15 @@
 export EDITOR='nvim'
-export PATH='/home/kareem/.local/bin:$PATH'
+export PATH='/home/kareem/.local/bin:'$PATH
 export BROWSER='brave'
 export TERMINAL='st'
 export LOCATION='Princeton'
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 . ~/scripts/remaps
 . ~/scripts/setbg
-picom -b &
+xcompmgr &
 unclutter &
 redshift &
 dunst &
+nextcloud --background &
 #xautolock -time 15 -corners ---00 -locker "systemctl suspend" &

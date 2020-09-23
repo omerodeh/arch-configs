@@ -21,7 +21,7 @@ set expandtab
 let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -110,6 +110,11 @@ inoremap <C-k> <Esc>[sz=
 nnoremap <C-k> [sz=
 "inoremap <Esc>[sz=
 "nnoremap  [s <Enter>
+
+" for groff (ms)
+
+autocmd FileType ms nnoremap <buffer> \v :!mupdf %:t:r.pdf& <Enter>
+autocmd FileType ms nnoremap <buffer> \l :!groff -T pdf -ms % > %:t:r.pdf <Enter>
 
 " for latex
 
